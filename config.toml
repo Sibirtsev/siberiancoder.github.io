@@ -2,3 +2,34 @@ baseURL = 'https://siberiancoder.com/'
 languageCode = 'en-us'
 title = 'Siberian Coder'
 theme = 'PaperMod'
+
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    contentDir = 'content/en'
+    disabled = false
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    title = 'Siberian Coder'
+    weight = 1
+  
+  [languages.ru]
+    contentDir = 'content/ru'
+    disabled = false
+    languageCode = 'ru-RU'
+    languageDirection = 'ltr'
+    languageName = 'Русский'
+    title = 'Сибирский кодер'
+    weight = 2
+  
+  [languages.de]
+    contentDir = 'content/de'
+    disabled = false
+    languageCode = 'de-DE'
+    languageDirection = 'ltr'
+    languageName = 'Deutsch'
+    title = 'Sibirischer Programmierer'
+    weight = 3
