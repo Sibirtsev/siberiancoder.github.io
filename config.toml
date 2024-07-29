@@ -1,0 +1,4 @@
+baseURL = 'https://siberiancoder.com/'
+languageCode = 'en-us'
+title = 'Siberian Coder'
+theme = 'PaperMod'
