@@ -8,7 +8,7 @@ The rest of this file is intentionally empty.
 */
 
 module.exports = {
-    content: ["./layouts/**/*.html", "./content/**/*.md"],
+    content: ["./layouts/**/*.html", "./content/**/*.md", "./themes/SiberianCoder/layouts/**/*.html"],
     darkMode: "class",
     theme: {
       extend: {},
