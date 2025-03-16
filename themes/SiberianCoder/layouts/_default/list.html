@@ -1,0 +1,51 @@
+{{ define "main" }}
+<h2 class="text-2xl font-bold mb-4">{{ .Title }}</h2>
+<div class="space-y-6">
+    {{ range .Paginator.Pages }}
+    <article class="w-full p-4 md:p-6 text-xl leading-normal">
+        <!--Title-->
+        <div class="font-sans">
+            <h3 class="font-bold font-sans break-normalpt-6 pb-2 text-3xl md:text-4xl">
+                <a href="{{ .RelPermalink }}">
+                    {{ .Title }}
+                </a>
+            </h3>
+            {{ with .Date }}
+            <p class="text-sm md:text-base font-normal">{{ .Format "02.01.2006" }}</p>
+            {{ end }}
+        </div>
+
+        <div class="mt-2 text-gray-800 dark:text-gray-300">
+            {{ if .Params.description }}
+            {{ .Params.description }}
+            {{ else }}
+            {{ .Summary }}
+            {{ end }}
+        </div>
+
+        <a href="{{ .RelPermalink }}"
+            class="break-normal text-base md:text-sm font-bold no-underline hover:underline">{{ i18n "read_more" }}</a>
+
+    </article>
+    {{ end }}
+</div>
+
+
+<div class="flex justify-between items-center mt-6 p-4 md:p-6">
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}"
+        class="break-normal text-base md:text-sm font-bold no-underline hover:underline">
+        {{ i18n "prev_page" }}
+    </a>
+    {{ end }}
+
+    <span>{{ i18n "page" }} {{ .Paginator.PageNumber }} {{ i18n "from" }} {{ .Paginator.TotalPages }}</span>
+
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}"
+        class="break-normal text-base md:text-sm font-bold no-underline hover:underline">
+        {{ i18n "next_page" }}
+    </a>
+    {{ end }}
+</div>
+{{ end }}

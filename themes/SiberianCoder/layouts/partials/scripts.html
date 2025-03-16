@@ -1,0 +1,2 @@
+{{ $themeToggle := resources.Get "js/script.js" | minify }}
+<script src='{{ $themeToggle.RelPermalink  }}'></script>

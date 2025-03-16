@@ -1,0 +1,29 @@
+- id: welcome
+  translation: "Latest posts"
+
+- id: read_more
+  translation: "Read more →"
+
+- id: page
+  translation: "Page"
+
+- id: from
+  translation: "from"
+
+- id: prev_page
+  translation: "← Previous"
+
+- id: next_page
+  translation: "Next →"
+
+- id: prev_post
+  translation: "← Previous post"
+
+- id: next_post
+  translation: "Next post →"
+
+- id: menu
+  translation: "Menu"
+
+- id: back_to_posts
+  translation: "Back to posts"

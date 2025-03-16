@@ -1,7 +1,17 @@
 baseURL = 'https://siberiancoder.com/'
 languageCode = 'en-us'
 title = 'Siberian Coder'
-theme = 'PaperMod'
+theme = 'SiberianCoder'
+
+[pagination]
+pagerSize = 5
+
+[params]
+[params.social]
+  github = ""
+  telegram = ""
+  twitter = ""
+  linkedin = ""
 
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
@@ -15,7 +25,22 @@ defaultContentLanguageInSubdir = true
     languageName = 'English'
     title = 'Siberian Coder'
     weight = 1
-  
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+      name = "Posts"
+      url = "/posts/"
+      weight = 2
+
+      [[languages.en.menu.main]]
+      name = "Youtube"
+      url = "https://www.youtube.com/@SiberianCoderEN"
+      weight = 3
+
+      [[languages.en.menu.main]]
+      name = "Github"
+      url = "https://github.com/Siberian-Coder"
+      weight = 4
+
   [languages.ru]
     contentDir = 'content/ru'
     disabled = false
@@ -24,12 +49,38 @@ defaultContentLanguageInSubdir = true
     languageName = 'Русский'
     title = 'Сибирский кодер'
     weight = 2
-  
-  [languages.de]
-    contentDir = 'content/de'
-    disabled = false
-    languageCode = 'de-DE'
-    languageDirection = 'ltr'
-    languageName = 'Deutsch'
-    title = 'Sibirischer Programmierer'
-    weight = 3
+
+    [languages.ru.menu]
+      [[languages.ru.menu.main]]
+      name = "Посты"
+      url = "/ru/posts/"
+      weight = 2
+
+      [[languages.ru.menu.main]]
+      name = "Ютуб"
+      url = "https://www.youtube.com/@SibireanCoderRu"
+      weight = 3
+
+      [[languages.ru.menu.main]]
+      name = "Гитхаб"
+      url = "https://github.com/Siberian-Coder"
+      weight = 4
+
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'

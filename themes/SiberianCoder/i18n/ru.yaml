@@ -1,0 +1,29 @@
+- id: welcome
+  translation: "Последние посты"
+
+- id: read_more
+  translation: "Читать дальше →"
+
+- id: page
+  translation: "Страница"
+
+- id: from
+  translation: "из"
+
+- id: prev_page
+  translation: "← Назад"
+
+- id: next_page
+  translation: "Вперёд →"
+
+- id: prev_post
+  translation: "← Предыдущий пост"
+
+- id: next_post
+  translation: "Следующий пост →"
+
+- id: menu
+  translation: "Навигация"
+
+- id: back_to_posts
+  translation: "Назад к постам"
