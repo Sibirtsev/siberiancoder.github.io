@@ -4,7 +4,6 @@ description: This is a simple example homepage content for an index.md file.
 menu:
   main:
     weight: 1
-kind: page
 ---
 
 # Hello, World!
