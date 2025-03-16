@@ -2,9 +2,11 @@
 <article class="w-full px-4 md:px-6 text-xl leading-normal">
     <!--Title-->
     <div class="font-sans">
+        {{ if eq .Type "posts" }}
         <p class="text-base md:text-smfont-bold">&lt; <a href='{{ "/posts/" | relLangURL }}'
                 class="text-base md:text-sm font-bold no-underline hover:underline">{{ i18n "back_to_posts" }}</a>
         </p>
+        {{ end }}
         <h1 class="font-bold font-sans break-normalpt-6 pb-2 text-3xl md:text-4xl">{{ .Title }}</h1>
         {{ with .Date }}
         <p class="text-sm md:text-base font-normal">{{ .Format "02.01.2006" }}</p>
@@ -13,9 +15,16 @@
 
     {{ .Content }}
 
+    {{ if eq .Type "posts" }}
     <!--Next & Prev Links-->
     <div class="font-sans flex justify-between content-center px-4 pb-12">
-        {{ with .Page.Prev }}
+        {{ $prev := "" }}
+        {{ range where .Site.RegularPages "Type" "posts" }}
+        {{ if and (lt .Date $.Date) (or (eq $prev "") (gt .Date $prev.Date)) }}
+        {{ $prev = . }}
+        {{ end }}
+        {{ end }}
+        {{ with $prev }}
         <div class="text-left">
             <span class="text-xs md:text-sm font-normal text-gray-600 dark:text-gray-400">
                 {{ i18n "prev_post" }}
@@ -25,7 +34,13 @@
             </p>
         </div>
         {{ end }}
-        {{ with .Page.Next }}
+        {{ $next := "" }}
+        {{ range where .Site.RegularPages "Type" "posts" }}
+        {{ if and (gt .Date $.Date) (or (eq $next "") (lt .Date $next.Date)) }}
+        {{ $next = . }}
+        {{ end }}
+        {{ end }}
+        {{ with $next }}
         <div class="text-right">
             <span class="text-xs md:text-sm font-normal text-gray-600 dark:text-gray-400">
                 {{ i18n "next_post" }}
@@ -36,6 +51,6 @@
         </div>
         {{ end }}
     </div>
-
+    {{ end }}
 </article>
 {{ end }}

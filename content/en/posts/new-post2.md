@@ -2,6 +2,7 @@
 title: "New Post2"
 date: 2025-03-16T13:08:02+01:00
 draft: false
+type: posts
 ---
 
 Pellentesque sed felis in lacus tempus vulputate. Nunc ipsum erat, convallis id porttitor sit amet, viverra tristique sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam in rutrum justo. Proin mattis purus velit, non vulputate justo consequat aliquet. Fusce elit nibh, accumsan eget mattis pharetra, accumsan at magna. Mauris pellentesque consequat mauris, ut feugiat nulla volutpat in. Curabitur volutpat sed diam nec mattis. Nam malesuada dapibus pellentesque. Nulla non commodo enim, sit amet lacinia metus.
