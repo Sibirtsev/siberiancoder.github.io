@@ -8,6 +8,6 @@
       "tailwindcss": "^3.4.1"
     },
     "scripts": {
-      "build:css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./static/css/style.css --minify"
+      "build:css": "npx tailwindcss -i ./themes/SiberianCoder/assets/css/main.css -o ./static/css/style.css --minify"
     }
   }
