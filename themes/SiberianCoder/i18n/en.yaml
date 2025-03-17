@@ -27,3 +27,9 @@
 
 - id: back_to_posts
   translation: "Back to posts"
+
+- id: page_not_found_text
+  translation: "Sorry, the page you are looking for does not exist. It may have been moved or deleted."
+
+- id: back_to_home
+  translation: "Back to Home"

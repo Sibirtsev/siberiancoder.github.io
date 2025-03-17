@@ -27,3 +27,9 @@
 
 - id: back_to_posts
   translation: "Назад к постам"
+
+- id: page_not_found_text
+  translation: "Такой страницы нет. Увы :("
+
+- id: back_to_home
+  translation: "Назад на главную"
