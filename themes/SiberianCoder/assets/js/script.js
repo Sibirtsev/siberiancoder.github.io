@@ -1,19 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById("theme-toggle");
     const html = document.documentElement; // Меняем класс на <html>, а не <body>
+    const chromaStyle = document.getElementById("chroma-style");
 
-    // Проверяем сохранённую тему
     if (localStorage.getItem("theme") === "dark") {
         html.classList.add("dark");
+        chromaStyle.href = "/css/chroma-dark.css";
+    } else {
+        html.classList.remove("dark");
+        chromaStyle.href = "/css/chroma-light.css";
     }
 
     toggle.addEventListener("click", function () {
         if (html.classList.contains("dark")) {
             html.classList.remove("dark");
             localStorage.setItem("theme", "light");
+            chromaStyle.href = "/css/chroma-light.css";
         } else {
             html.classList.add("dark");
             localStorage.setItem("theme", "dark");
+            chromaStyle.href = "/css/chroma-dark.css";
         }
     });
 });

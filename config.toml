@@ -66,6 +66,14 @@ defaultContentLanguageInSubdir = true
       url = "https://github.com/Siberian-Coder"
       weight = 4
 
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
 
 [build]
   [build.buildStats]
