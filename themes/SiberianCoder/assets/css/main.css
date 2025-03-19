@@ -125,13 +125,11 @@ body footer div#footer-wrapper div#footer-content div#footer-content-column div 
 body footer div#footer-wrapper div#footer-content div#footer-content-column div ul li a {
   @apply inline-block no-underline py-1;
 }
-
+/* Typografics */
 article {
-  @apply max-w-[800px] leading-[1.75] text-lg text-[#333] mx-auto my-0;
+  @apply max-w-[800px] leading-[1.75] text-lg text-gray-800 dark:text-gray-200 mx-auto my-0;
   font-family: "Georgia", "Times New Roman", serif;
 }
-
-/* Typografics */
 article h1 {
   @apply text-[2rem] mt-8;
 }
@@ -142,29 +140,13 @@ article h3 {
   @apply text-2xl mt-5;
 }
 article ul li {
-  @apply text-left list-[square];
+  @apply text-left;
 }
 article p {
   @apply mb-[1em] pt-0 mb-4 pb-0;
 }
 article blockquote {
-  @apply ml-0 italic text-[#666] italic mx-[1.5em] my-0 pl-4 border-l-4 border-l-[#ccc] border-solid;
-}
-article div.marginnote span {
-  @apply text-left m-0 p-0;
-}
-article div.highlight {
-  @apply pb-[1em];
-}
-article ol li {
-  @apply list-decimal;
-}
-
-article a:hover {
-  @apply underline;
-}
-
-article blockquote {
+  @apply ml-0 italic text-gray-600 dark:text-gray-300 italic mx-[1.5em] my-0 pl-4 border-l-4 border-l-gray-300 dark:border-l-gray-400 border-solid;
   font-family: Georgia, "Bitstream Charter", serif;
 }
 article blockquote:before,
@@ -174,29 +156,27 @@ article q:after {
   @apply content-[""];
 }
 article blockquote,
-blockquote q {
+article blockquote q {
   quotes: "" "";
 }
 
-article ul,
-article ol {
-  @apply mb-4 pl-6;
+article a {
+  @apply underline text-gray-500 dark:text-gray-300 hover:no-underline;
 }
-article li {
-  @apply mb-2;
+article .footnotes a {
+  @apply no-underline;
 }
 
-.dark article {
-  @apply text-[#ddd];
+article div.highlight {
+  @apply pb-[1em];
 }
-.dark article blockquote {
-  @apply text-[#bbb] border-l-[#666];
+
+article div.marginnote {
+  @apply float-right w-[30%] text-sm italic text-gray-500 dark:text-gray-300 ml-[1em] mr-0 my-[1em] pl-2.5 border-l-2 border-l-gray-300 dark:border-l-gray-500 border-solid;
 }
-.marginnote {
-  @apply float-right w-[30%] text-sm italic text-[#666] ml-[1em] mr-0 my-[1em] pl-2.5 border-l-2 border-l-[#ccc] border-solid;
-}
-.dark .marginnote {
-  @apply text-[#bbb] border-l-[#666];
+
+article div.marginnote span {
+  @apply text-left m-0 p-0;
 }
 
 pre {
@@ -205,11 +185,65 @@ pre {
 }
 
 code {
-  @apply text-[0.9em] bg-[rgba(0,0,0,0.05)] px-[0.4rem] py-[0.2rem] rounded-[3px];
+  @apply text-[0.8em] bg-[rgba(0,0,0,0.05)] px-[0.4rem] py-[0.2rem] rounded-[3px];
   font-family: "Fira Code", "Menlo", monospace;
 }
 
 pre code {
   @apply block p-0;
   background: none;
+}
+article > table {
+  @apply block pt-[0.5em] pb-[1em] px-0;
+}
+article > table td,
+article > table th {
+  @apply text-[0.95rem] px-[1em] py-0;
+}
+article > table th {
+  @apply text-left border-b border-solid;
+}
+article > table tbody tr:nth-child(odd) {
+  @apply bg-gray-300 dark:bg-gray-700;
+}
+article dl {
+  @apply px-0 py-[1em];
+}
+article dl dt {
+  @apply font-[bold];
+}
+article dl dd {
+  @apply pl-[2em] before:content-["—_"];
+}
+article ul:has(li:first-child > input[type="checkbox"]) {
+  @apply list-none pl-0;
+}
+article ul li > input[type="checkbox"] {
+  @apply mr-[0.3em];
+}
+article ul li:has(input[type="checkbox"]):before {
+  @apply content-[""];
+}
+article ul,
+article ol {
+  @apply mb-4 pl-6;
+}
+article li {
+  @apply mb-2;
+}
+article ol li {
+  @apply list-decimal;
+}
+
+article ul {
+  list-style: none;
+}
+article ul li::before {
+  @apply content-["—"] mr-[0.3em];
+}
+article .footnotes {
+  @apply text-[0.95rem];
+}
+article .footnotes ol {
+  @apply pt-1;
 }

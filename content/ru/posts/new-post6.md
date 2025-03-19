@@ -36,7 +36,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 > Suspendisse condimentum elementum porta. Integer mattis feugiat diam, non convallis lacus congue cursus. 
 
-Duis et viverra risus, vitae sollicitudin sapien. Donec maximus dolor nec nisl pretium dignissim. Here's a simple footnote,[^1] and here's a longer one.[^bignote] Donec mattis urna quis felis fermentum, ac faucibus orci ultricies. Nulla iaculis enim tellus, a pretium purus vehicula commodo. Vestibulum id est vitae elit sollicitudin iaculis. 
+Простая таблица
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+Таблица с выравниванием
+
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+
+Duis et viverra risus, vitae sollicitudin sapien. https://google.com Donec maximus dolor nec nisl pretium dignissim. Here's a simple footnote,[^1] and here's a longer one.[^bignote] Donec mattis urna quis felis fermentum, ac faucibus orci ultricies. Nulla iaculis enim tellus, a pretium purus vehicula commodo. Vestibulum id est vitae elit sollicitudin iaculis. 
 
 {{% marginnote %}} А это заметка на полях! {{% /marginnote %}}
 
