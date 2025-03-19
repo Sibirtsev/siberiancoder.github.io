@@ -17,8 +17,6 @@ main {
   @apply grow container w-full md:max-w-3xl mx-auto pt-20;
 }
 
-
-
 body header#header {
   @apply fixed w-full z-10 top-0;
 }
@@ -126,4 +124,92 @@ body footer div#footer-wrapper div#footer-content div#footer-content-column div 
 
 body footer div#footer-wrapper div#footer-content div#footer-content-column div ul li a {
   @apply inline-block no-underline py-1;
+}
+
+article {
+  @apply max-w-[800px] leading-[1.75] text-lg text-[#333] mx-auto my-0;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+/* Typografics */
+article h1 {
+  @apply text-[2rem] mt-8;
+}
+article h2 {
+  @apply text-[1.75rem] mt-6;
+}
+article h3 {
+  @apply text-2xl mt-5;
+}
+article ul li {
+  @apply text-left list-[square];
+}
+article p {
+  @apply mb-[1em] pt-0 mb-4 pb-0;
+}
+article blockquote {
+  @apply ml-0 italic text-[#666] italic mx-[1.5em] my-0 pl-4 border-l-4 border-l-[#ccc] border-solid;
+}
+article div.marginnote span {
+  @apply text-left m-0 p-0;
+}
+article div.highlight {
+  @apply pb-[1em];
+}
+article ol li {
+  @apply list-decimal;
+}
+
+article a:hover {
+  @apply underline;
+}
+
+article blockquote {
+  font-family: Georgia, "Bitstream Charter", serif;
+}
+article blockquote:before,
+article blockquote:after,
+article q:before,
+article q:after {
+  @apply content-[""];
+}
+article blockquote,
+blockquote q {
+  quotes: "" "";
+}
+
+article ul,
+article ol {
+  @apply mb-4 pl-6;
+}
+article li {
+  @apply mb-2;
+}
+
+.dark article {
+  @apply text-[#ddd];
+}
+.dark article blockquote {
+  @apply text-[#bbb] border-l-[#666];
+}
+.marginnote {
+  @apply float-right w-[30%] text-sm italic text-[#666] ml-[1em] mr-0 my-[1em] pl-2.5 border-l-2 border-l-[#ccc] border-solid;
+}
+.dark .marginnote {
+  @apply text-[#bbb] border-l-[#666];
+}
+
+pre {
+  @apply overflow-x-auto whitespace-pre-wrap max-w-full p-4 rounded-[5px]; 
+  word-wrap: break-word;
+}
+
+code {
+  @apply text-[0.9em] bg-[rgba(0,0,0,0.05)] px-[0.4rem] py-[0.2rem] rounded-[3px];
+  font-family: "Fira Code", "Menlo", monospace;
+}
+
+pre code {
+  @apply block p-0;
+  background: none;
 }

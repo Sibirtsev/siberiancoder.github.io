@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Siberian Coder'
 theme = 'SiberianCoder'
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [pagination]
 pagerSize = 5
 
