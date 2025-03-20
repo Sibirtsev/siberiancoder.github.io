@@ -163,6 +163,16 @@ article blockquote q {
 article a {
   @apply underline text-gray-500 dark:text-gray-300 hover:no-underline;
 }
+
+article h1 a,
+article h2 a,
+article h3 a,
+article h4 a,
+article h5 a,
+article h6 a {
+  @apply no-underline text-gray-800 dark:text-gray-200 hover:underline;
+}
+
 article .footnotes a {
   @apply no-underline;
 }
