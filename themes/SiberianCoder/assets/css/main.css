@@ -116,7 +116,7 @@ body footer {
 }
 
 body footer div#footer-wrapper {
-  @apply container max-w-4xl mx-auto flex py-8;
+  @apply container md:max-w-4xl mx-auto flex py-8;
 }
 
 body footer div#footer-wrapper div#footer-content {
