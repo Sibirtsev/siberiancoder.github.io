@@ -63,9 +63,7 @@ Second Term
 - [ ] Contact the media
 
 
-Duis et viverra risus, vitae sollicitudin sapien. https://google.com Donec maximus dolor nec nisl pretium dignissim. Here's a simple footnote,[^1] and here's a longer one.[^bignote] Donec mattis urna quis felis fermentum, ac faucibus orci ultricies. Nulla iaculis enim tellus, a pretium purus vehicula commodo. Vestibulum id est vitae elit sollicitudin iaculis. 
-
-{{% marginnote %}} А это заметка на полях! {{% /marginnote %}}
+Duis et viverra risus, vitae sollicitudin sapien. https://google.com Donec maximus dolor nec nisl pretium dignissim. Here's a simple footnote,[^1] and here's a longer one.[^bignote] Donec mattis urna quis felis fermentum, ac faucibus orci ultricies. Nulla iaculis enim tellus, a pretium purus vehicula commodo. Vestibulum id est vitae elit sollicitudin iaculis. {{% marginnote %}} А это заметка на полях! {{% /marginnote %}}
 
 Aenean in nibh risus. Nunc tincidunt molestie eros ut ullamcorper. Donec eu imperdiet lacus, in scelerisque nisi. Maecenas sit amet dignissim ipsum. Mauris tristique neque in blandit dapibus. 
 
@@ -82,9 +80,7 @@ CREATE TABLE `logs` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; 
 ```
 
-Suspendisse eget velit aliquam, tincidunt ligula non, imperdiet mauris. Integer ipsum massa, vulputate varius leo volutpat, iaculis facilisis libero. Duis ut mi quis arcu imperdiet venenatis. Ut efficitur ligula id aliquam suscipit.
-
-{{% marginnote %}}А это вторая заметка на полях! Она чуть-чуть длинее, чем предыдущая {{% /marginnote %}}
+Suspendisse eget velit aliquam, tincidunt ligula non, imperdiet mauris. Integer ipsum massa, vulputate varius leo volutpat, iaculis facilisis libero. Duis ut mi quis arcu imperdiet venenatis. Ut efficitur ligula id aliquam suscipit. {{% marginnote %}}А это вторая заметка на полях! Она чуть-чуть длинее, чем предыдущая {{% /marginnote %}} 
 
 Aenean in nibh risus. Nunc tincidunt molestie eros ut ullamcorper. Donec eu imperdiet lacus, in scelerisque nisi. Maecenas sit amet dignissim ipsum. Mauris tristique neque in blandit dapibus. 
 

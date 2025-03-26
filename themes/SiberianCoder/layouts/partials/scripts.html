@@ -1,2 +1,5 @@
 {{ $themeToggle := resources.Get "js/script.js" | minify }}
 <script src='{{ $themeToggle.RelPermalink  }}'></script>
+
+{{ $lightbox := resources.Get "js/lightbox.js" | minify }}
+<script src='{{ $lightbox.RelPermalink  }}'></script>

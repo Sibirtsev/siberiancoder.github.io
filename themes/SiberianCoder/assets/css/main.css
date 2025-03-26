@@ -12,6 +12,7 @@ html {
 }
 body {
   @apply flex min-h-full flex-col bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans leading-normal tracking-normal;
+  counter-reset: sidenote-counter;
 }
 main {
   @apply grow container w-full md:max-w-3xl mx-auto pt-20;
@@ -94,6 +95,22 @@ article p {
   @apply pb-4 pt-4 md:pb-6 md:pt-6
 }
 
+h2.page-title {
+  @apply text-2xl font-bold mb-4;
+}
+
+div.page-content {
+  @apply space-y-6;
+}
+
+div.page-footer {
+  @apply flex justify-between items-center mt-6 p-4 md:p-6;
+}
+
+div.page-footer span {
+  @apply text-sm;
+}
+
 body footer {
   @apply border-t mt-4 border-gray-400 shadow dark:border-gray-700 bg-white dark:bg-gray-800 ;
 }
@@ -125,9 +142,44 @@ body footer div#footer-wrapper div#footer-content div#footer-content-column div 
 body footer div#footer-wrapper div#footer-content div#footer-content-column div ul li a {
   @apply inline-block no-underline py-1;
 }
+
+/* Style for list */
+article .article-header,
+article .article-footer {
+  @apply font-sans;
+}
+
+article .article-header h1,
+article .article-header h3 {
+  @apply font-bold break-normal pt-6 pb-2 text-3xl;
+}
+
+article .article-header .article-header__published-at-date {
+  @apply text-sm font-normal;
+}
+
+article .article-header .article-header__back-to-posts {
+  /*@apply text-base md:text-sm font-bold;*/
+}
+
+article .article-footer {
+  @apply flex justify-between content-center px-4 pb-12;
+}
+
+div.page-footer a,
+article .article-header .article-header__back-to-posts a,
+article .article-footer a {
+  @apply break-normal text-base md:text-sm font-bold no-underline hover:underline;
+}
+
+article .article-footer .article-footer__navigaion-text {
+  @apply text-xs md:text-sm font-normal text-gray-600 dark:text-gray-400;
+}
+
 /* Typografics */
 article {
-  @apply max-w-[800px] leading-[1.75] text-lg text-gray-800 dark:text-gray-200 mx-auto my-0;
+  @apply max-w-4xl text-lg text-gray-800 dark:text-gray-200 mx-auto my-0;
+  @apply w-full px-4 md:px-6 text-xl leading-normal;
   font-family: "Georgia", "Times New Roman", serif;
 }
 article h1 {
@@ -178,15 +230,7 @@ article .footnotes a {
 }
 
 article div.highlight {
-  @apply pb-[1em];
-}
-
-article div.marginnote {
-  @apply float-right w-[30%] text-sm italic text-gray-500 dark:text-gray-300 ml-[1em] mr-0 my-[1em] pl-2.5 border-l-2 border-l-gray-300 dark:border-l-gray-500 border-solid;
-}
-
-article div.marginnote span {
-  @apply text-left m-0 p-0;
+  @apply pb-2;
 }
 
 pre {
@@ -203,17 +247,17 @@ pre code {
   @apply block p-0;
   background: none;
 }
-article > table {
+article .article-body > table {
   @apply block pt-[0.5em] pb-[1em] px-0;
 }
-article > table td,
-article > table th {
+article .article-body > table td,
+article .article-body > table th {
   @apply text-[0.95rem] px-[1em] py-0;
 }
-article > table th {
+article .article-body > table th {
   @apply text-left border-b border-solid;
 }
-article > table tbody tr:nth-child(odd) {
+article .article-body > table tbody tr:nth-child(odd) {
   @apply bg-gray-300 dark:bg-gray-700;
 }
 article dl {
@@ -251,9 +295,39 @@ article ul {
 article ul li::before {
   @apply content-["—"] mr-[0.3em];
 }
+
+article ul.image-gallery li::before {
+  @apply content-[""];
+}
+
 article .footnotes {
-  @apply text-[0.95rem];
+  @apply text-sm;
 }
 article .footnotes ol {
   @apply pt-1;
+}
+
+.sidenote {
+  @apply text-sm relative;
+}
+
+.sidenote {
+  @apply max-xl:float-left max-xl:text-left max-xl:w-full max-xl:mx-0 max-xl:my-4 max-xl:pl-5 max-xl:border-l-2 max-xl:border-l-gray-300 max-xl:dark:border-l-gray-500 max-xl:border-solid;
+  @apply xl:float-left xl:clear-left xl:ml-[-23vw] xl:text-right xl:-top-4 xl:w-[20vw] xl:mt-4 xl:pr-4 xl:border-r-2 xl:border-r-gray-300 xl:dark:border-r-gray-500 xl:border-solid;
+}
+
+.sidenote-number:hover .sidenote {
+  @apply xl:bg-gray-200 xl:dark:bg-gray-700;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+/* Counter before the sidenote in the margin. */
+.sidenote::before {
+  @apply content-[counter(sidenote-counter)"."] relative align-baseline text-sm font-bold;
+}
+/* Counter in the main body. */
+.sidenote-number::after {
+  @apply content-[counter(sidenote-counter)] align-super text-xs font-bold mr-2;
 }
