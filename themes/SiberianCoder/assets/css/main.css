@@ -333,7 +333,7 @@ article div.highlight {
 
 pre {
   @apply overflow-x-auto whitespace-pre-wrap max-w-full
-    block pt-4 pb-4 pl-1 pr-1 border-t-gray-300 dark:border-t-gray-700 border-t-2 border-0; 
+    block p-4 border-t-gray-300 dark:border-t-gray-700 border-t-2 border-0; 
   word-wrap: break-word;
 }
 

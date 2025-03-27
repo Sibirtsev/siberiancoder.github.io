@@ -67,8 +67,7 @@ Duis et viverra risus, vitae sollicitudin sapien. https://google.com Donec maxim
 
 Aenean in nibh risus. Nunc tincidunt molestie eros ut ullamcorper. Donec eu imperdiet lacus, in scelerisque nisi. Maecenas sit amet dignissim ipsum. Mauris tristique neque in blandit dapibus. 
 
-{{< codeblock id="sql-example" title="Пример SQL-кода" lang="sql" >}}
-DROP TABLE IF EXISTS `logs`;
+{{< codeblock id="sql-example" title="Пример SQL-кода" lang="sql" >}}DROP TABLE IF EXISTS `logs`;
 
 CREATE TABLE `logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
