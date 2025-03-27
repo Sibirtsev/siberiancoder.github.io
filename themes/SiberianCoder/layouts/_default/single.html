@@ -27,7 +27,7 @@
         {{ end }}
     </div>
 
-    {{ if .TableOfContents }}
+    {{ if and (.TableOfContents) (gt (len .TableOfContents) 32) }}
     <div class="toc toc-mobile">
         <h2>{{ i18n "table_of_contents" }}</h2>
         {{ .TableOfContents }}
@@ -65,7 +65,7 @@
         {{ end }}
     </div>
 
-    {{ if .TableOfContents }}
+    {{ if and (.TableOfContents) (gt (len .TableOfContents) 32) }}
     <aside class="toc toc-desktop">
         <h2>{{ i18n "table_of_contents" }}</h2>
         {{ .TableOfContents }}
