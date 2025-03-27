@@ -3,6 +3,8 @@ title: "New Post5"
 date: 2025-03-16T13:09:07+01:00
 draft: false
 type: posts
+categories: ["http"]
+tags: ["test", "hello", "web", "php"]
 ---
 
 ![alt](/images/post5/image.png)

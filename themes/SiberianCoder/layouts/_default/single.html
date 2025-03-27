@@ -7,11 +7,33 @@
             <a href='{{ "/posts/" | relLangURL }}'>{{ i18n "back_to_posts" }}</a>
         </p>
         {{ end }}
+
+        <div class="article-header__post-links">
+            {{ with .Params.categories }}
+            {{ range . }}
+            <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="category">{{ . }}</a>
+            {{ end }}
+            {{ end }}
+            {{ with .Params.tags }}
+            {{ range . }}
+            <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="tag">{{ . }}</a>
+            {{ end }}
+            {{ end }}
+        </div>
+
         <h1>{{ .Title }}</h1>
         {{ with .Date }}
         <p class="article-header__published-at-date">{{ .Format "02.01.2006" }}</p>
         {{ end }}
     </div>
+
+    {{ if .TableOfContents }}
+    <div class="toc toc-mobile">
+        <h2>{{ i18n "table_of_contents" }}</h2>
+        {{ .TableOfContents }}
+    </div>
+    {{ end }}
+
     <div class="article-body">
         {{ .Content }}
     </div>
@@ -27,11 +49,7 @@
         {{ end }}
         {{ with $prev }}
         <div class="text-left">
-            <span class="article-footer__navigaion-text">
-                {{ i18n "prev_post" }}
-            </span><br>
-            <p><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </p>
+            <a href="{{ .RelPermalink }}">{{ i18n "prev_post" }}{{ .Title }}</a>
         </div>
         {{ end }}
         {{ $next := "" }}
@@ -42,14 +60,18 @@
         {{ end }}
         {{ with $next }}
         <div class="text-right">
-            <span class="article-footer__navigaion-text">
-                {{ i18n "next_post" }}
-            </span><br>
-            <p><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </p>
+            <a href="{{ .RelPermalink }}">{{ .Title }}{{ i18n "next_post" }}</a>
         </div>
         {{ end }}
     </div>
+
+    {{ if .TableOfContents }}
+    <aside class="toc toc-desktop">
+        <h2>{{ i18n "table_of_contents" }}</h2>
+        {{ .TableOfContents }}
+    </aside>
+    {{ end }}
+
     {{ end }}
 </article>
 {{ end }}

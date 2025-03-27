@@ -17,10 +17,10 @@
   translation: "Next →"
 
 - id: prev_post
-  translation: "← Previous post"
+  translation: "← "
 
 - id: next_post
-  translation: "Next post →"
+  translation: " →"
 
 - id: menu
   translation: "Menu"
@@ -33,3 +33,12 @@
 
 - id: back_to_home
   translation: "Back to Home"
+
+- id: posts_by_tag
+  translation: "Posts tagged with"
+
+- id: posts_by_category
+  translation: "Posts categorized in"
+
+- id: table_of_contents
+  translation: "Table of contents"

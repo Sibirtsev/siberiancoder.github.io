@@ -11,16 +11,16 @@
   translation: "из"
 
 - id: prev_page
-  translation: "← Назад"
+  translation: "←Назад"
 
 - id: next_page
   translation: "Вперёд →"
 
 - id: prev_post
-  translation: "← Предыдущий пост"
+  translation: "← "
 
 - id: next_post
-  translation: "Следующий пост →"
+  translation: " →"
 
 - id: menu
   translation: "Навигация"
@@ -33,3 +33,12 @@
 
 - id: back_to_home
   translation: "Назад на главную"
+
+- id: posts_by_tag
+  translation: "Посты с тегом"
+
+- id: posts_by_category
+  translation: "Посты в категории"
+
+- id: table_of_contents
+  translation: "Содержание"

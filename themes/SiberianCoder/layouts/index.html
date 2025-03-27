@@ -2,36 +2,13 @@
 
 {{ .Content }}
 
-<h2 class="text-2xl font-bold mb-4">{{ i18n "welcome" }}</h2>
-<div class="space-y-6">
+<h2 class="page-title">{{ i18n "welcome" }}</h2>
+
+<div class="page-body">
     {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
-    <article class="w-full px-4 md:px-6 text-xl leading-normal">
-        <!--Title-->
-        <div class="font-sans">
-            <h3 class="font-bold font-sans break-normalpt-6 pb-2 text-3xl md:text-4xl">
-                <a href="{{ .RelPermalink }}">
-                    {{ .Title }}
-                </a>
-            </h3>
-            {{ with .Date }}
-            <p class="text-sm md:text-base font-normal">{{ .Format "02.01.2006" }}</p>
-            {{ end }}
-        </div>
-
-        <div class="mt-2 text-gray-800 dark:text-gray-300">
-            {{ if .Params.description }}
-            {{ .Params.description }}
-            {{ else }}
-            {{ .Summary }}
-            {{ end }}
-        </div>
-
-        <a href="{{ .RelPermalink }}" class="break-normal text-base md:text-sm font-bold no-underline hover:underline">
-            {{ i18n "read_more" }}
-        </a>
-
-    </article>
+    {{ partial "article.html" . }}
     {{ end }}
+</div>
 </div>
 
 {{ end }}

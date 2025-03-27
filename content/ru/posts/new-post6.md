@@ -5,8 +5,6 @@ draft: false
 type: posts
 ---
 
-# Заголовок
-
 ## Подзаголовок
 
 ### Подподзаголовок
@@ -20,6 +18,8 @@ type: posts
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 Maecenas rutrum, eros quis suscipit malesuada, tortor est lacinia dolor, ac lobortis purus nibh ut est. Sed ultrices, mi vel rutrum dapibus, orci tellus vestibulum dolor, non iaculis nunc nisi id nunc. Donec in efficitur lorem. Suspendisse eros diam, tempus id lacinia at, rhoncus sit amet tortor. Phasellus in erat at massa hendrerit viverra. Curabitur gravida purus et est venenatis volutpat. Fusce ultricies metus sed lacinia aliquet. Nam ut euismod ligula, luctus porta sapien. Aenean in metus sed dolor mollis iaculis vitae nec mi. Vestibulum ultrices consequat vulputate. Ut at felis lorem.
+
+## Подзаголовок 2
 
 - номер 1
 - номер 2
@@ -67,7 +67,7 @@ Duis et viverra risus, vitae sollicitudin sapien. https://google.com Donec maxim
 
 Aenean in nibh risus. Nunc tincidunt molestie eros ut ullamcorper. Donec eu imperdiet lacus, in scelerisque nisi. Maecenas sit amet dignissim ipsum. Mauris tristique neque in blandit dapibus. 
 
-```sql
+{{< codeblock id="sql-example" title="Пример SQL-кода" lang="sql" >}}
 DROP TABLE IF EXISTS `logs`;
 
 CREATE TABLE `logs` (
@@ -78,7 +78,7 @@ CREATE TABLE `logs` (
   PRIMARY KEY (`id`),
   KEY `idx_user_date` (`user_id`,`created_at`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; 
-```
+{{< /codeblock >}}
 
 Suspendisse eget velit aliquam, tincidunt ligula non, imperdiet mauris. Integer ipsum massa, vulputate varius leo volutpat, iaculis facilisis libero. Duis ut mi quis arcu imperdiet venenatis. Ut efficitur ligula id aliquam suscipit. {{% marginnote %}}А это вторая заметка на полях! Она чуть-чуть длинее, чем предыдущая {{% /marginnote %}} 
 
