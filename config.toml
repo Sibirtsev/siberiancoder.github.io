@@ -2,6 +2,7 @@ baseURL = 'https://siberiancoder.com/'
 languageCode = 'en-us'
 title = 'Siberian Coder'
 theme = 'SiberianCoder'
+googleAnalytics = "G-CTVXGCZFKZ"
 
 [markup.goldmark.renderer]
 unsafe = true
