@@ -3,3 +3,6 @@
 
 {{ $lightbox := resources.Get "js/lightbox.js" | minify }}
 <script src='{{ $lightbox.RelPermalink  }}'></script>
+
+{{ $cookie := resources.Get "js/cookie.js" | minify }}
+<script src='{{ $cookie.RelPermalink  }}'></script>
