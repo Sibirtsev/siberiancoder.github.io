@@ -83,6 +83,8 @@ Suspendisse eget velit aliquam, tincidunt ligula non, imperdiet mauris. Integer 
 
 Aenean in nibh risus. Nunc tincidunt molestie eros ut ullamcorper. Donec eu imperdiet lacus, in scelerisque nisi. Maecenas sit amet dignissim ipsum. Mauris tristique neque in blandit dapibus. 
 
+![pdf](/files/git_cheat_sheet.pdf)
+
 [^1]: This is the first footnote.
 
 [^bignote]: Here's one with multiple paragraphs and code.
